@@ -15,12 +15,7 @@
  * http://www.leptonica.com/binary-morphology.html
  *
  */
-
-
-inline int roundUp(const int x, const int y)
-{
-    return (x + y - 1) / y; 
-}
+inline int	roundUp(int x, int y)	{ return (x + y - 1) / y; }
 
 
 /*!
@@ -32,12 +27,8 @@ inline int roundUp(const int x, const int y)
  * \param[in]       hsize: horizontal size of Sel; must be odd; origin implicitly in center
  * \param[in]       vsize: ditto
  */
-extern "C"
-void erode(unsigned char* img_d,
-        const int width,
-        const int height,
-        const int hsize,
-        const int vsize);
+extern "C" void	erode(unsigned char* img_d,
+		      int width, int height, int hsize, int vsize);
 
 
 /*!
@@ -49,11 +40,7 @@ void erode(unsigned char* img_d,
  * \param[in]       hsize: horizontal size of Sel; must be odd; origin implicitly in center
  * \param[in]       vsize: ditto
  */
-extern "C"
-void dilate(unsigned char* img_d,
-        const int width,
-        const int height,
-        const int hsize,
-        const int vsize);
+extern "C" void	dilate(unsigned char* img_d,
+		       int width, int height, int hsize, int vsize);
 
 #endif /* MORPHOLOGY_H */
